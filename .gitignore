@@ -1,0 +1,16 @@
+# Public repository: only the course app and its illustrations are shared.
+# Everything else in this folder (program guides, decks, planning notes,
+# research PDFs, feedback logs) stays on this computer.
+/*
+!/.gitignore
+!/README.md
+!/.github/
+!/course-app/
+!/resources/
+/resources/*
+!/resources/illustrations/
+
+# Built files are made by GitHub Actions and by `npm run build`.
+/course-app/dist/
+node_modules/
+.DS_Store
