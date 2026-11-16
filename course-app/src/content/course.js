@@ -36,7 +36,7 @@ const COURSE = {
   title: 'Job Coach Training',
   subtitle: 'Independence in Practice',
   // Saved with every record so old answers can be matched to the wording they answered.
-  version: '2026-11-12.1',
+  version: '2026-11-16.1',
   // The course overview on the home page. Mirrors the "Course goals" screen in the deck.
   goals: [
     'Protect the student’s role as the worker and decision maker',
@@ -111,7 +111,7 @@ const COURSE = {
             { type: 'callout', tone: 'dark', html: 'The student does the work. The coach does not do it for them.' },
             { type: 'cards', items: [
               { title: 'Exception 1: Modeling, showing how', tone: 'yellow', items: ['You do one step while the student watches. Then you hand it right back, and the student does the next one.<br><br><strong>Example:</strong> Ben wipes one table while Luis watches. Luis wipes the rest.'] },
-              { title: 'Exception 2: Parallel working', tone: 'gray', items: ['You do the same task next to the student so they can follow along. Use it only for students it helps, on purpose, with a plan to fade it.<br><br><strong>Example:</strong> Dana faces one shelf beside Maya, then moves farther away each week.'] },
+              { title: 'Exception 2: Parallel working', tone: 'gray', items: ['You do the same task next to the student so they can follow along. Use it only for students it helps, on purpose, with a plan to fade it.<br><br><strong>Example:</strong> Dana faces one shelf beside Maya, then moves farther away each week.<br><br><strong>Pace example:</strong> Ben wipes tables next to Luis at the speed the workplace expects, so Luis can match it. As Luis keeps up, Ben steps away.'] },
             ] },
             { type: 'coach', kind: 'trap', html: 'Luis is behind before lunch, so Ben starts wiping tables to catch up. That is not modeling. Luis loses the practice, and the supervisor sees Ben doing Luis’s job.' },
           ],
@@ -463,12 +463,12 @@ const COURSE = {
           lead: 'Use this routine before suggesting any support. Adult preference alone is not evidence that a support works.',
           blocks: [
             { type: 'list', ordered: true, items: [
-              '<strong>Ask:</strong> “What part of this is hard?” Use the student’s communication mode.',
+              '<strong>Ask:</strong> “What part of this is hard?” Ask the way you usually communicate with this student. Then give them time to answer in their own way.',
               '<strong>Listen:</strong> Note the student’s words and what you observe. Do not finish the answer for them.',
-              '<strong>Offer:</strong> Share two or three options. Include doing nothing new as one choice.',
+              '<strong>Offer:</strong> Suggest two or three supports the student could try. Keeping things the way they are is always one of the choices.',
               '<strong>Confirm:</strong> The student chooses what to try, or shows you whether it works: by telling you, or by using it or not using it. Agree on how you will both know it is working.',
             ] },
-            { type: 'coach', kind: 'tip', html: 'Ask in the student’s mode. Luis answers on his speech app, so ask one short question, then wait while he types.' },
+            { type: 'coach', kind: 'tip', html: 'Give the student the time and the way to answer in their own mode. Ask Luis one short question the way you usually talk with him, then wait while he answers on his speech app. Don’t answer for him or move on while he types.' },
           ],
         },
         {
@@ -682,11 +682,14 @@ const COURSE = {
           id: 'm2-job-site',
           kind: 'Job-site action',
           title: 'Job-site action',
-          lead: 'Try this at your next site visit, then come back and record what happened. You can finish the module now and record this later.',
+          lead: 'Do one of these, then come back and record it. You can finish the module now and record this later.',
           blocks: [
-            { type: 'callout', tone: 'dark', html: 'Use the support trial loop for one barrier. Find out what the student tells or shows you before you suggest any product, and teach the support before you judge it.' },
+            { type: 'cards', items: [
+              { title: 'At your next site visit', tone: 'yellow', items: ['Use the support trial loop for one barrier. Find out what the student tells or shows you before you suggest any product, and teach the support before you judge it.'] },
+              { title: 'Or, from past practice', tone: 'gray', items: ['Describe a time a support was already found and tried at your site: what the barrier was, what the student told or showed you, how the support was taught, and what showed it worked.'] },
+            ] },
           ],
-          activity: { type: 'action', id: 'm2-action', prompt: 'Use the support trial loop for one barrier. Find out what the student tells or shows you before you suggest any product, and teach the support before you judge it.' },
+          activity: { type: 'action', id: 'm2-action', prompt: 'Do one: use the support trial loop for one barrier at your next site visit, or describe a time a support was already found and tried at your site. Include the barrier, what the student told or showed you, how the support was taught, and what showed it worked.' },
         },
       ],
     },
@@ -700,11 +703,11 @@ const COURSE = {
       art: 'taskSteps',
       outcomes: [
         'Explain what a task analysis is and why coaching decisions start from one.',
-        'Break a workplace task into observable steps, at the right size for the student.',
+        'Break a workplace task into observable steps, at the right step size for the student.',
         'Confirm the steps and the Workplace Standard with the workplace before teaching.',
         'Assess each step to find where training begins.',
         'Name the student’s next target on the way to the Workplace Standard.',
-        'Plan for the skill to transfer to new conditions and last.',
+        'Plan for the student to generalize the skill: to use it in new settings and conditions, and to keep it over time.',
       ],
       screens: [
         {
@@ -714,7 +717,7 @@ const COURSE = {
           lead: 'Turn a complete workplace task into observable steps connected to the Workplace Standard. By the end of this module you will be able to:',
           blocks: [
             { type: 'outcomes' },
-            { type: 'callout', tone: 'coral', html: '<strong>Why it matters:</strong> if the steps aren’t clear, no two people teach them the same way, and the student pays for it.' },
+            { type: 'callout', tone: 'coral', html: '<strong>Why it matters:</strong> clearly defined steps help the student and staff know exactly what is expected at every point in the task.' },
           ],
         },
         {
@@ -731,7 +734,7 @@ const COURSE = {
               ['When the student is ready for you to step back', 'Fading, in Modules 5 and 8'],
             ] },
             { type: 'cards', items: [
-              { title: 'Who builds it', tone: 'yellow', items: ['The work experience coordinator builds the task analysis with the workplace supervisor. A job coach may build one too, if comfortable. Either way, the coach teaches from it and helps keep it accurate.'] },
+              { title: 'Who builds it', tone: 'yellow', items: ['The work experience coordinator builds the task analysis. When the workplace supervisor is able and available, they build it together. At other sites, the supervisor gives input about how the task is done, or reviews and approves the finished task analysis.', 'A job coach may build one too, if comfortable. Either way, the coach teaches from it and helps keep it accurate.', 'One workplace may have several task analyses, one for each task in the student’s job.'] },
             ] },
             { type: 'coach', kind: 'tip', html: 'Training begins where skill ends. Teach the steps the student can’t do yet, not the ones they already can.' },
           ],
@@ -746,7 +749,7 @@ const COURSE = {
               ['<strong>Task analysis</strong>', 'A written or visual breakdown of a complete task into observable steps that can be taught and measured'],
               ['<strong>Task hierarchy</strong>', 'The ordered relationship among the whole job, major task parts, individual steps, and smaller actions when a step needs more breakdown'],
               ['<strong>Observable step</strong>', 'One action with a visible result that two people would agree did or did not happen'],
-              ['<strong>Workplace Standard</strong>', 'What the workplace expects of any worker doing this task: completion, quality and safety, pace, and independence. It tells you when a step or task is done right.'],
+              ['<strong>Workplace Standard</strong>', 'What the workplace expects of any worker doing this task: completion, quality and safety, pace, and independence. It tells you when a step or task is done to expectations.'],
               ['<strong>Baseline</strong>', 'A record of how the student does each step before teaching or a new support begins'],
             ] },
           ],
@@ -764,7 +767,7 @@ const COURSE = {
               '<strong>Step:</strong> spray the approved cleaner on one table',
               '<strong>Smaller actions, only if needed:</strong> check the label, point the nozzle at the table, spray two times',
             ] },
-            { type: 'callout', tone: 'gray', html: 'Only break a step into smaller actions when the student can’t do it reliably as written. Extra steps make a task analysis harder to teach and harder to fade.' },
+            { type: 'callout', tone: 'gray', html: 'Only break a step into smaller actions when the student can’t do it reliably as written.' },
           ],
         },
         {
@@ -805,7 +808,7 @@ const COURSE = {
           blocks: [
             { type: 'table', head: ['Vague step', 'Observable step'], rows: [
               ['Clean the room', 'Wipe the whole table, left to right'],
-              ['Be careful with chemicals', 'Spray cleaner only on the table, away from people'],
+              ['Be careful with chemicals', 'Spray the approved cleaner on one table, away from people and electronics'],
               ['Understand the schedule', 'Check the schedule card and start the first task on it'],
               ['Finish correctly', 'Return the cart to the closet and tell the supervisor the room is ready'],
             ] },
@@ -849,16 +852,16 @@ const COURSE = {
           id: 'm3-confirm',
           kind: 'Learn',
           title: 'Confirm the steps before you teach',
-          lead: 'A task analysis is a draft until the workplace and the student confirm it.',
+          lead: 'A task analysis is a draft until the workplace confirms it and you walk through it with the student.',
           blocks: [
             { type: 'list', ordered: true, items: [
-              '<strong>Ask:</strong> ask the supervisor for the Workplace Standard and any required order.',
+              '<strong>Ask:</strong> ask the supervisor for the Workplace Standard and any required order. Your work experience coordinator may already know it, so check with them first.',
               '<strong>Watch:</strong> observe a skilled coworker do the task.',
               '<strong>Walk through:</strong> go through the steps with the student and find out what they already do.',
               '<strong>Check rules:</strong> note site rules for safety, hygiene, and equipment.',
               '<strong>Revise:</strong> remove extra steps and add missing ones.',
             ] },
-            { type: 'coach', kind: 'trap', html: 'Ben writes the steps from memory and starts teaching. Mr. Okafor wants chairs pushed in before the tables are wiped. Luis learns it the wrong way and has to relearn it.' },
+            { type: 'coach', kind: 'trap', html: 'Ben writes the steps from memory and teaches Luis to push in the chairs first. Mr. Okafor wants the chairs pushed in after the tables are wiped, so the chairs don’t get dirty. Luis learns it the wrong way and has to relearn it.' },
           ],
         },
         {
@@ -867,22 +870,22 @@ const COURSE = {
           title: 'Assess each step to find where training begins',
           lead: 'Before teaching, watch the student do the whole task with no added help, when it is safe. Record each step as done independently (+) or not yet (−).',
           blocks: [
-            { type: 'table', head: ['Luis’s step', 'Day 1', 'Day 2'], rows: [
-              ['1. Take the cart to the room', '+', '+'],
-              ['2. Throw away trash', '+', '+'],
-              ['3. Items to lost and found', '+', '+'],
-              ['4. Spray cleaner on one table', '−', '−'],
-              ['5. Wipe the whole table', '+', '−'],
-              ['6. Check for spots', '−', '−'],
-              ['7. Push in chairs', '+', '+'],
-              ['8. Return the cart', '+', '+'],
-              ['9. Tell Mr. Okafor', '−', '−'],
+            { type: 'table', head: ['Luis’s step', 'Day 1', 'Day 2', 'Day 3'], rows: [
+              ['1. Take the cart to the room', '+', '+', '+'],
+              ['2. Throw away trash', '+', '+', '+'],
+              ['3. Items to lost and found', '+', '+', '+'],
+              ['4. Spray cleaner on one table', '−', '−', '−'],
+              ['5. Wipe the whole table', '−', '−', '+'],
+              ['6. Check for spots', '−', '−', '−'],
+              ['7. Push in chairs', '+', '+', '+'],
+              ['8. Return the cart', '+', '+', '+'],
+              ['9. Tell Mr. Okafor', '−', '−', '−'],
             ] },
             { type: 'predict', prompt: 'Where should Ben start teaching?',
               options: ['At step 1, teaching the whole task from the beginning', 'At the steps Luis can’t do yet: 4, 5, 6, and 9', 'At whichever step Ben thinks is hardest'],
               responses: [
                 'Luis already does steps 1, 2, 7, and 8 on his own. Reteaching them wastes his time and adds prompts he doesn’t need.',
-                'That’s it. Training begins where skill ends. Steps that are mixed across days, like 5, are teaching targets too.',
+                'That’s it. Training begins where skill ends. Steps that are just starting to come, like 5, are teaching targets too until they are consistent.',
                 'Ben’s guess may be wrong. The baseline shows exactly which steps need teaching.',
               ] },
             { type: 'p', html: '<strong>Ben teaches steps 4, 5, 6, and 9.</strong> He leaves the steps Luis already does alone. Repeat the assessment on two or three days if performance varies, and on any step that affects safety, step in and record it as not yet.' },
@@ -920,7 +923,7 @@ const COURSE = {
         {
           id: 'm3-transfer',
           kind: 'Learn',
-          title: 'Plan for the skill to transfer and last',
+          title: 'Plan for the student to generalize and keep the skill',
           lead: 'A skill isn’t learned until it lasts and works in new conditions.',
           blocks: [
             { type: 'table', head: ['Term', 'What it means'], rows: [
@@ -928,18 +931,18 @@ const COURSE = {
               ['<strong>Maintenance</strong>', 'Keeping the skill weeks after teaching ends'],
             ] },
             { type: 'list', items: [
-              'Practice in different rooms, with different supervisors, and at busy times',
+              'When possible, practice in different rooms, with different supervisors, and at busy times',
               'Check the skill again two and four weeks after it is mastered',
               'Write these checks into the teaching plan from the start',
             ] },
-            { type: 'callout', tone: 'gray', html: '<strong>What research shows:</strong> a review of 75 studies found that people with significant disabilities learned many work tasks, but few studies checked whether the skills generalized or lasted. Plan for it.' },
+            { type: 'callout', tone: 'gray', html: '<strong>What research shows:</strong> a review of 75 experiments found that people with significant disabilities learned many work tasks, but few studies checked whether the skills generalized or lasted. Plan for it. (Cannella-Malone & Schaefer, 2017, <em>Career Development and Transition for Exceptional Individuals</em>, 40(2))' },
           ],
         },
         {
           id: 'm3-practice',
           kind: 'Try it',
           title: 'Practice: improve a task analysis',
-          lead: 'Maya’s first task analysis for facing a shelf has three vague steps: “Get ready,” “Do the shelf,” and “Finish up.”',
+          lead: 'Maya’s initial task analysis for facing a shelf has three vague steps: “Get ready,” “Do the shelf,” and “Finish up.”',
           activity: {
             type: 'write',
             items: [
@@ -996,14 +999,14 @@ const COURSE = {
               prompt: 'When does a step need to be broken into smaller actions?',
               options: ['Always, for every student', 'When the student can’t do the step reliably as written', 'When the supervisor asks for more detail', 'Never; smaller steps confuse students'],
               answer: 1,
-              explain: 'Break a step down only as far as the student needs. Extra steps make a task harder to teach and to fade.',
+              explain: 'Break a step down only as far as the student needs.',
             },
             {
               id: 'm3-cp-standard',
               prompt: 'Who sets the Workplace Standard for a task?',
-              options: ['The job coach', 'The workplace, confirmed with the student', 'The student alone', 'Whoever wrote the task analysis'],
+              options: ['The job coach', 'The workplace (the employer or supervisor) or the work experience coordinator', 'The student alone', 'Whoever wrote the task analysis'],
               answer: 1,
-              explain: 'The workplace sets the Workplace Standard. The coach asks for it and confirms it before teaching.',
+              explain: 'The workplace sets the Workplace Standard, and the work experience coordinator often already knows it. The coach asks for it and confirms it before teaching.',
             },
             {
               id: 'm3-cp-baseline',
@@ -1022,9 +1025,9 @@ const COURSE = {
             {
               id: 'm3-cp-builder',
               prompt: 'Who builds the task analysis in our program?',
-              options: ['Only the supervisor', 'The work experience coordinator with the supervisor, or a job coach who feels comfortable doing it', 'The student', 'Nobody; coaches teach from memory'],
+              options: ['Only the supervisor', 'The work experience coordinator, with the supervisor’s input, or a job coach who feels comfortable doing it', 'The student', 'Nobody; coaches teach from memory'],
               answer: 1,
-              explain: 'The work experience coordinator builds it with the supervisor. A job coach may build one too, if comfortable. The coach always teaches from it.',
+              explain: 'The work experience coordinator builds it, with the supervisor’s input or approval. A job coach may build one too, if comfortable. The coach always teaches from it.',
             },
           ] },
         },
