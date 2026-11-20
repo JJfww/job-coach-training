@@ -36,7 +36,7 @@ const COURSE = {
   title: 'Job Coach Training',
   subtitle: 'Independence in Practice',
   // Saved with every record so old answers can be matched to the wording they answered.
-  version: '2026-11-16.1',
+  version: '2026-11-20.1',
   // The course overview on the home page. Mirrors the "Course goals" screen in the deck.
   goals: [
     'Protect the student’s role as the worker and decision maker',
@@ -1044,11 +1044,14 @@ const COURSE = {
           id: 'm3-job-site',
           kind: 'Job-site action',
           title: 'Job-site action',
-          lead: 'Try this at your next site visit, then come back and record what happened. You can finish the module now and record this later.',
+          lead: 'Do one of these, then come back and record it. You can finish the module now and record this later.',
           blocks: [
-            { type: 'callout', tone: 'dark', html: 'Choose one real task. Get or build its task analysis, confirm the steps and the Workplace Standard with the workplace, and assess each step before you teach.' },
+            { type: 'cards', items: [
+              { title: 'At your next site visit', tone: 'yellow', items: ['Choose one real task. Get or build its task analysis, confirm the steps and the Workplace Standard with the workplace, and assess each step before you teach.'] },
+              { title: 'Or, from past practice', tone: 'gray', items: ['Describe a task analysis already in use at your site: who built it, how the steps and the Workplace Standard were confirmed, and how each step was assessed before teaching.'] },
+            ] },
           ],
-          activity: { type: 'action', id: 'm3-action', prompt: 'Choose one real task. Get or build its task analysis, confirm the steps and the Workplace Standard with the workplace, and assess each step before you teach.' },
+          activity: { type: 'action', id: 'm3-action', prompt: 'Do one: choose one real task. Get or build its task analysis, confirm the steps and the Workplace Standard with the workplace, and assess each step before you teach. Or: describe a task analysis already in use at your site: who built it, how the steps and the Workplace Standard were confirmed, and how each step was assessed before teaching.' },
         },
       ],
     },
@@ -1352,11 +1355,14 @@ const COURSE = {
           id: 'm4-job-site',
           kind: 'Job-site action',
           title: 'Job-site action',
-          lead: 'Try this at your next site visit, then come back and record what happened. You can finish the module now and record this later.',
+          lead: 'Do one of these, then come back and record it. You can finish the module now and record this later.',
           blocks: [
-            { type: 'callout', tone: 'dark', html: 'For one task, choose a chaining strategy and write why. Plan what the student and you will each do during every step.' },
+            { type: 'cards', items: [
+              { title: 'At your next site visit', tone: 'yellow', items: ['For one task, choose a chaining strategy and write why. Plan what the student and you will each do during every step.'] },
+              { title: 'Or, from past practice', tone: 'gray', items: ['Describe a task already taught at your site with chaining or the total-task method: which strategy was used and why, and what the student and the coach each did during every step.'] },
+            ] },
           ],
-          activity: { type: 'action', id: 'm4-action', prompt: 'For one task, choose a chaining strategy and write why. Plan what the student and you will each do during every step.' },
+          activity: { type: 'action', id: 'm4-action', prompt: 'Do one: for one task, choose a chaining strategy and write why. Plan what the student and you will each do during every step. Or: describe a task already taught at your site with chaining or the total-task method: which strategy was used and why, and what the student and the coach each did during every step.' },
         },
       ],
     },
@@ -1708,11 +1714,14 @@ const COURSE = {
           id: 'm5-job-site',
           kind: 'Job-site action',
           title: 'Job-site action',
-          lead: 'Try this at your next site visit, then come back and record what happened. You can finish the module now and record this later.',
+          lead: 'Do one of these, then come back and record it. You can finish the module now and record this later.',
           blocks: [
-            { type: 'callout', tone: 'dark', html: 'Choose one prompt you give often. Move it toward the natural cue: wait longer, use fewer words, or use a less restrictive level. Notice what the student does.' },
+            { type: 'cards', items: [
+              { title: 'At your next site visit', tone: 'yellow', items: ['Choose one prompt you give often. Move it toward the natural cue: wait longer, use fewer words, or use a less restrictive level. Notice what the student does.'] },
+              { title: 'Or, from past practice', tone: 'gray', items: ['Describe a time you or another coach moved a prompt toward the natural cue: what the prompt was, what changed (more wait time, fewer words, or a less restrictive level), and what the student did.'] },
+            ] },
           ],
-          activity: { type: 'action', id: 'm5-action', prompt: 'Choose one prompt you give often. Move it toward the natural cue: wait longer, use fewer words, or use a less restrictive level. Notice what the student does.' },
+          activity: { type: 'action', id: 'm5-action', prompt: 'Do one: choose one prompt you give often. Move it toward the natural cue: wait longer, use fewer words, or use a less restrictive level. Notice what the student does. Or: describe a time you or another coach moved a prompt toward the natural cue: what the prompt was, what changed (more wait time, fewer words, or a less restrictive level), and what the student did.' },
         },
       ],
     },
